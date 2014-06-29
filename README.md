@@ -20,13 +20,13 @@ Dann das GIT des OSIAM Docker Image auschecken und bauen:
 
   git clone https://github.com/osiam/docker-image.git
   cd docker-image
-  
+
   # docker image bauen
   mvn clean initialize docker:package
-  
+
   # docker image taggen und ins private repo hinzufügen
   docker tag osiam-docker_osiam-dev osiam/dev
- 
+
 Das Docker-Image kann nun gestartet werden. Je nach Konfiguration muss docker mit root-Rechten gestartet werden (z.B. sudo docker ...)
 
   docker run -it -p 8080:8080 -p 5432:5432 osiam-docker_osiam-dev
