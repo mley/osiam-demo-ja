@@ -49,7 +49,9 @@ Wenn das Docker-Image erfolgreich gestartet wurde, sollte es auf der Konsole fol
 
 # Demo-Projekt bauen und starten
 
-Dieses Projekt ebenfalls klonen und in die IDE importieren und die Klasse OsiamDemo starten oder aus der Shell bauen und starten:
+Dieses Projekt ebenfalls klonen, in die IDE importieren und die Klasse OsiamDemo starten oder aus der Shell bauen und starten:
 
     $ mvn package
     $ java -jar target/osiam-demo-ja-1.0-SNAPSHOT.jar
+
+Dann im Browser http://localhost:5000 aufrufen.

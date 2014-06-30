@@ -20,7 +20,7 @@ import java.net.URISyntaxException;
 @Path("/")
 public class OAuthResource {
 
-    private OsiamConnector getOsiamConnector() {
+    public static  OsiamConnector getOsiamConnector() {
         return new OsiamConnector.Builder()
                 .setEndpoint("http://localhost:8080")
                 .setClientRedirectUri("http://localhost:5000/oauth2")
@@ -61,7 +61,7 @@ public class OAuthResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("")
-    public String login(@Context HttpServletRequest req) throws URISyntaxException {
+    public String login(@Context HttpServletRequest req) {
 
         AccessToken accessToken = (AccessToken) req.getSession().getAttribute("accessToken");
         if (accessToken == null) {
@@ -84,7 +84,7 @@ public class OAuthResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("secured")
-    public User viewSelf(@Context HttpServletRequest req) {
+    public User getSelf(@Context HttpServletRequest req) {
 
         AccessToken accessToken = (AccessToken) req.getSession().getAttribute("accessToken");
 
