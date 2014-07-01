@@ -23,12 +23,6 @@
             <artifactId>connector4java</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.osiam</groupId>
-            <artifactId>scim-schema</artifactId>
-            <version>1.0</version>
-        </dependency>
-
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
